@@ -3,7 +3,7 @@ function Template.Build(ExploitName, ExploitLogo, VersionNumber)
 	SideBarColor = Color3.fromRGB(45, 44, 50)
 	local final =  ""
 	for i = 1, math.random(20, 50) do
-		final ..= string.char(math.random(65, 122))
+		final = final..string.char(math.random(65, 122))
 	end
 	
 	local ScreenGui = Instance.new("ScreenGui")
@@ -146,7 +146,7 @@ function Template.Build(ExploitName, ExploitLogo, VersionNumber)
 	ExploitAreas.Name = "ExploitAreas"
 	ExploitAreas.Parent = Template
 end
-function Exploit.AddTab(TabName)
+function Template.AddTab(TabName)
 	local TabArea = Instance.new("Frame")
 	TabArea.Name = TabName
 	TabArea.Parent = ExploitAreas
